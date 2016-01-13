@@ -1,4 +1,4 @@
-# MachineLearningChallenge
+# Machine Learning Challenge
 
 Paytm has several merchants who sell merchandise across different categories. As a merchant performance manager I want to understand how well a merchant is doing but since there are so many conflicting dimensions it is hard to say how is merchant performing overall. As an example some merchants may have great service like product they advertise is exactly what they deliver, others may deliver a variation or overpromise to customer. Similarly, a merchant may sell a lot of units but they get ship late consistently and hence cause bad customer experience. 
 
@@ -6,7 +6,7 @@ We want you to come up with a universal score for every merchant to summarize th
 
 
 ##There are three datasets provided to you –
-1.	[Transactions:](https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/transactions/part-00000) – These are all the transactions from users in a fixed time period. This table has merchant id which will let you calculate summary statistics for every merchant. Here is the schema -
+1.	[Transactions:](https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/transactions/part-00000) – These are all the transactions from users in a fixed time period. This table has merchant id which will let you calculate summary statistics for every merchant. Here is the schema and data is in CSV format.
   1.    merchant_id: Unique ID representing a merchant
   2.    T1:Root Category
   3.    T2: Sub Category
@@ -28,7 +28,7 @@ We want you to come up with a universal score for every merchant to summarize th
   a.	Commission%-   Average commission paid by merchant to us, aggregated by primary category (see concept of categories section below).
   b.	Discount %-    Average discount offered by merchant to customers, aggregated by primary category.
   c.	Cash back %-   Average cash back offered by us to customers on items sold by merchant, aggregated by primary category.                       Paytm uses cashback as a preferred method for promotions.
-Here is the schema -
+Here is the schema and data is in CSV format.
   1.  merchant_id: Unique Merchant_id
   2.  T1: Root category
   3.  T2: Sub Category
@@ -37,13 +37,13 @@ Here is the schema -
   6.  cashback_percent: Average % cashback (discount from Paytm) given across all items sold by merchant. This is aggregated at primary category level.
   7.  discount_percent: Average % discount given by merchant across all the orders. This is aggregated at primary category level.
 
-3.	[Returned Cancelled Metrics](https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/returnedCancelledMetrics/part-00000) – This dataset has all merchant related cancelled and retuned orders. Merchants sometime cancel the order in case they are not able to acquire inventory or maybe they accepted an order but does not want to ship to a particular pin code. Returns can happen if customer receives order late since merchant did not ship in time or item received is not as promised on the platform. Cancelled and returned order here are only because of merchants’ fault and general customer cancellations are not a part of it.Here is the schema -
+3.	[Returned Cancelled Metrics](https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/returnedCancelledMetrics/part-00000) – This dataset has all merchant related cancelled and retuned orders. Merchants sometime cancel the order in case they are not able to acquire inventory or maybe they accepted an order but does not want to ship to a particular pin code. Returns can happen if customer receives order late since merchant did not ship in time or item received is not as promised on the platform. Cancelled and returned order here are only because of merchants’ fault and general customer cancellations are not a part of it.Here is the schema and data is in CSV format.
   1.  merchant_id: Unique Merchant_id
   2.  T1: Root category
   3.  T2: Sub  Category
   4.  T4: Primary Category
   5.  cancel_num: Total number of orders cancelled by merchant, aggregated at primary category level
-  6.  return_num: Totoal number of returned orders fulfilled by merchant, aggregated at primary category level
+  6.  return_num: Total number of returned orders fulfilled by merchant, aggregated at primary category level
 
 ##Concept of categories 
 One thing you will notice in the datasets is category fields T1, T2, T4. All the catalogs are structured in some hierarchy. We have shared 3 levels of hierarchy where T1 -> T2 -> T4 -> Product ID. As an example Mobile and Accessories is a Root category or T1, under this we have 2 Sub categories 1) Mobiles and 2) Accessories and finally each T2 category has many T4 categories (primary category) as an example T2 category Mobiles can have 2 primary categories 1) Smart phones 2) Feature phones. 
