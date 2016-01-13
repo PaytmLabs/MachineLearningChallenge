@@ -60,7 +60,7 @@ One thing you will notice in the datasets is category fields T1, T2, T4. All the
 ##What is expected:
 1.	Provide a list of merchant id and score and explanation of why you think some merchants should have higher score than others.
 
-2.	We expect you to be good in at least 1 programming language. Please don’t complete this using one of the packaged solutions (example SAS)
+2.	We expect you to be good in at least 1 programming language (Scala, java, Python, R). Please don’t complete this using one of the packaged solutions (example SAS/SPSS)
 
 3.	A good story is as important as an algorithm. We expect you to be able to communicate to us your idea, methodology and implementation. Please create a read-me describing your approach. (Visualizations can be submitted in appendix and are always appreciated but they should convey some message. Interactive visualizations get extra points)
 
