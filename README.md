@@ -71,9 +71,9 @@ One thing you will notice in the datasets is category fields T1, T2, T4. All the
 5.  If you find some parts of this assignment challenging or not able to finish it, don't hestitate to let us know. We can always help answer the questions and/or reduce the scope. Ultimately,journey is more important than destination!
 
 ##Data
-Transaction Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/transactions/part-00000
-Profit Metrics Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/profitMetrics/part-00000)
-Returned Cancelled Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/returnedCancelledMetrics/part-00000
+1.  Transaction Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/transactions/part-00000
+2.  Profit Metrics Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/profitMetrics/part-00000)
+3.  Returned Cancelled Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/returnedCancelledMetrics/part-00000
 
 
 
