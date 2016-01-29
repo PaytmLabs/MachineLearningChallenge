@@ -49,13 +49,15 @@ Here is the schema and data is in CSV format.
 One thing you will notice in the datasets is category fields T1, T2, T4. All the catalogs are structured in some hierarchy. We have shared 3 levels of hierarchy where T1 -> T2 -> T4 -> Product ID. As an example Mobile and Accessories is a Root category or T1, under this we have 2 Sub categories 1) Mobiles and 2) Accessories and finally each T2 category has many T4 categories (primary category) as an example T2 category Mobiles can have 2 primary categories 1) Smart phones 2) Feature phones. 
 
 ##How to complete this challenge:
-1.	Fork this repo in github https://github.com/PaytmLabs/MachineLearningChallenge
+1.	Get the data from the links mentioned in data section below.
 
-2.	Complete the processing and analytics as defined first to the best of your ability with the time provided.
+2.	Fork this repo in github https://github.com/PaytmLabs/MachineLearningChallenge
 
-3.	Place notes in your code to help with clarity where appropriate. Make it readable enough to present to the Paytm Labs interview team.
+3.	Complete the processing and analytics as defined first to the best of your ability with the time provided.
 
-4.	Complete your work in your own github repo and send the results to us and/or present them during your interview.
+4.	Place notes in your code to help with clarity where appropriate. Make it readable enough to present to the Paytm Labs interview team.
+
+5.	Complete your work in your own github repo and send the results and code to us and/or present them during your interview.
 
 ##What is expected:
 1.	Provide a list of merchant id and score and explanation of why you think some merchants should have higher score than others.
@@ -68,7 +70,10 @@ One thing you will notice in the datasets is category fields T1, T2, T4. All the
 
 5.  If you find some parts of this assignment challenging or not able to finish it, don't hestitate to let us know. We can always help answer the questions and/or reduce the scope. Ultimately,journey is more important than destination!
 
-
+##Data
+Transaction Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/transactions/part-00000
+Profit Metrics Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/profitMetrics/part-00000)
+Returned Cancelled Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/returnedCancelledMetrics/part-00000
 
 
 
