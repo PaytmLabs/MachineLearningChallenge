@@ -1,4 +1,4 @@
-# Machine Learning Challenge
+# BIE Challenge
 
 Paytm has several merchants who sell merchandise across different categories. As a merchant performance manager I want to understand how well a merchant is doing but since there are so many conflicting dimensions it is hard to say how is merchant performing overall. As an example some merchants may have great service like product they advertise is exactly what they deliver, others may deliver a variation or overpromise to customer. Similarly, a merchant may sell a lot of units but they get ship late consistently and hence cause bad customer experience. 
 
