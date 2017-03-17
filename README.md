@@ -5,38 +5,41 @@ Paytm has several merchants who sell merchandise across different categories. As
 We want you to come up with a universal score for every merchant to summarize their performance. Think of this as a consumer credit score where many variables are considered and you get positive points for some behaviors and negative for others.
 
 
-##There are two datasets provided to you –
-1.	[Transactions:] – These are all the transactions from users in a fixed time period. This table has merchant id which will let you calculate summary statistics for every merchant. Here is the schema and data is in CSV format.
-  1.    merchant_id: Unique ID representing a merchant
-  2.    T1:Root Category
-  3.    T2: Sub Category
-  4.    T4: Primary Category
-  5.    order_id: Order id, think of an order as shopping cart
-  6.    order_item_id: Unique ID for every item in an order
-  7.    product_id: Product ID
-  8.    item_created_at: Time of order creation
-  9.    item_ship_by_date:  Latest date by which item must be shipped to the customer ( SLA driven)
-  10.   qty_ordered: Number of units ordered for an item
-  11.   item_mp: Original price of an item
-  12.   item_price: Price at which merchant is offering this product
-  13.   item_selling_price: Price at which this item was sold.
-  14.   item_discount: Discount offered by merchant
-  15.   fulfillment_shipped_at: Time when item was shipped from merchant to customer
-  16.   fulfillment_created_at: Time when shipment request was created for the item and merchant starts preparing the item   for shipment.
+## Description of datasets
+
+There are two datasets provided to you –
+
+1.	**Transactions** – These are all the transactions from users in a fixed time period. This table has merchant id which will let you calculate summary statistics for every merchant. Here is the schema and data is in CSV format.
+    1.    merchant_id: Unique ID representing a merchant
+    2.    T1:Root Category
+    3.    T2: Sub Category
+    4.    T4: Primary Category
+    5.    order_id: Order id, think of an order as shopping cart
+    6.    order_item_id: Unique ID for every item in an order
+     7.    product_id: Product ID
+    8.    item_created_at: Time of order creation
+    9.    item_ship_by_date:  Latest date by which item must be shipped to the customer ( SLA driven)
+    10.   qty_ordered: Number of units ordered for an item
+    11.   item_mp: Original price of an item
+    12.   item_price: Price at which merchant is offering this product
+    13.   item_selling_price: Price at which this item was sold.
+    14.   item_discount: Discount offered by merchant
+    15.   fulfillment_shipped_at: Time when item was shipped from merchant to customer
+    16.   fulfillment_created_at: Time when shipment request was created for the item and merchant starts preparing the item   for shipment.
 
 
-2.	[Returned Cancelled Metrics] – This dataset has all merchant related cancelled and retuned orders. Merchants sometime cancel the order in case they are not able to acquire inventory or maybe they accepted an order but does not want to ship to a particular pin code. Returns can happen if customer receives order late since merchant did not ship in time or item received is not as promised on the platform. Cancelled and returned order here are only because of merchants’ fault and general customer cancellations are not a part of it.Here is the schema and data is in CSV format.
-  1.  merchant_id: Unique Merchant_id
-  2.  T1: Root category
-  3.  T2: Sub  Category
-  4.  T4: Primary Category
-  5.  cancel_num: Total number of orders cancelled by merchant, aggregated at primary category level
-  6.  return_num: Total number of returned orders fulfilled by merchant, aggregated at primary category level
+2.	**Returned Cancelled Metrics** – This dataset has all merchant related cancelled and retuned orders. Merchants sometime cancel the order in case they are not able to acquire inventory or maybe they accepted an order but does not want to ship to a particular pin code. Returns can happen if customer receives order late since merchant did not ship in time or item received is not as promised on the platform. Cancelled and returned order here are only because of merchants’ fault and general customer cancellations are not a part of it.Here is the schema and data is in CSV format.
+    1.  merchant_id: Unique Merchant_id
+    2.  T1: Root category
+    3.  T2: Sub  Category
+    4.  T4: Primary Category
+    5.  cancel_num: Total number of orders cancelled by merchant, aggregated at primary category level
+    6.  return_num: Total number of returned orders fulfilled by merchant, aggregated at primary category level
 
-##Concept of categories 
+**Concept of categories:**
 One thing you will notice in the datasets is category fields T1, T2, T4. All the catalogs are structured in some hierarchy. We have shared 3 levels of hierarchy where T1 -> T2 -> T4 -> Product ID. As an example Mobile and Accessories is a Root category or T1, under this we have 2 Sub categories 1) Mobiles and 2) Accessories and finally each T2 category has many T4 categories (primary category) as an example T2 category Mobiles can have 2 primary categories 1) Smart phones 2) Feature phones. 
 
-##How to complete this challenge:
+## How to complete this challenge:
 1.	Get the data from the links mentioned in data section below. You don't have to use all the variables, use your judgement.
 
 2.	Fork this repo in github https://github.com/PaytmLabs/MachineLearningChallenge
@@ -47,7 +50,7 @@ One thing you will notice in the datasets is category fields T1, T2, T4. All the
 
 5.	Complete your work in your own github repo and send the results and code to us and/or present them during your interview.
 
-##What is expected:
+## What is expected:
 1.	Provide a list of merchant id and score and explanation of why you think some merchants should have higher score than others. Its ok to do this for a sample of merchants. We want to see how you approach the problem!
 
 2.	We expect you to be good in at least 1 programming language (Scala, java, Python, R). 
@@ -58,17 +61,6 @@ One thing you will notice in the datasets is category fields T1, T2, T4. All the
 
 5.  If you find some parts of this assignment challenging or not able to finish it, don't hestitate to let us know. We can always help answer the questions and/or reduce the scope. Ultimately,journey is more important than destination!
 
-##Data
+## Data
 1.  Transaction Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/transactions/part-00000
 2.  Returned Cancelled Data - https://s3.amazonaws.com/databricks-dump/datalakedr/mlTest/final/returnedCancelledMetrics/part-00000
-
-
-
-
-
-
-
-
-
-
-
